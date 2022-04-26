@@ -1,4 +1,4 @@
-from position.Position import Position
+from positionrepo.Position import Position
 
 
 class PositionSupplier:
