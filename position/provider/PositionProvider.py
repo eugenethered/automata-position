@@ -18,8 +18,13 @@ class PositionProvider:
         positions = self.position_supplier.get_positions()
         position = self.choose_position_based_on_slip(positions, position_slip)
         if position is not None:
+            self.use_position_slip(position_slip)
             self.position_repository.store(position)
         return position
+
+    def use_position_slip(self, position_slip):
+        position_slip.status = Status.USED
+        self.position_slip_repository.store(position_slip)
 
     @staticmethod
     def choose_position_based_on_slip(positions, position_slip) -> Position:
