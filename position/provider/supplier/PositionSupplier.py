@@ -1,7 +1,9 @@
+from typing import List
+
 from positionrepo.Position import Position
 
 
 class PositionSupplier:
 
-    def fetch_position(self) -> Position:
+    def get_positions(self) -> List[Position]:
         pass
