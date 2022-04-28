@@ -1,6 +1,6 @@
 from typing import List
 
-from positionrepo.Position import Position
+from core.position.Position import Position
 
 
 class PositionSupplier:

@@ -1,5 +1,5 @@
-from positionrepo.Position import Position
-from positionrepo.PositionSlip import Status
+from core.position.Position import Position
+from core.position.PositionSlip import Status
 from positionrepo.repository.PositionRepository import PositionRepository
 from positionrepo.repository.PositionSlipRepository import PositionSlipRepository
 
