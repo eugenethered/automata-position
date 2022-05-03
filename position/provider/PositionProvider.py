@@ -1,3 +1,5 @@
+from typing import Optional
+
 from core.position.Position import Position
 from core.position.PositionSlip import Status
 from positionrepo.repository.PositionRepository import PositionRepository
@@ -29,7 +31,7 @@ class PositionProvider:
         return position
 
     @staticmethod
-    def choose_position_based_on_slip(positions, position_slip) -> Position:
+    def choose_position_based_on_slip(positions, position_slip) -> Optional[Position]:
         eligible_positions = [p for p in positions if p.instrument == position_slip.instrument]
         if len(eligible_positions) > 0:
             return eligible_positions[0]
