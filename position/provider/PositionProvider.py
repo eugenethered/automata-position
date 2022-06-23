@@ -12,7 +12,7 @@ from position.provider.supplier.PositionSupplier import PositionSupplier
 class PositionProvider:
 
     def __init__(self, position_supplier: PositionSupplier, position_repository: PositionRepository, position_slip_repository: PositionSlipRepository):
-        self.log = logging.getLogger(__name__)
+        self.log = logging.getLogger('PositionProvider')
         self.position_supplier = position_supplier
         self.position_repository = position_repository
         self.position_slip_repository = position_slip_repository
